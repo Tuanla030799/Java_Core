@@ -12,7 +12,7 @@ public class Movie {
 
     public static Movie geMovie(String type, String title) {
         return switch (type.toUpperCase().charAt(0)) {
-            case 'A' -> new Aventure(title);
+            case 'A' -> new Adventure(title);
             case 'C' -> new Comedy(title);
             case 'S' -> new ScienceFiction(title);
             default -> new Movie(title);
@@ -22,8 +22,8 @@ public class Movie {
     ;
 }
 
-class Aventure extends Movie {
-    public Aventure(String title) {
+class Adventure extends Movie {
+    public Adventure(String title) {
         super(title);
     }
 
